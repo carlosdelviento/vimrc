@@ -24,7 +24,7 @@ if [ "$2" = "--all" ]; then
     for user in $USERS; do
         homepath=$(eval echo "~$user")
         IFS=''
-        echo $VIMRC > ${homepath}/.vimrc
+        echo $VIMRC > ${HOME}/.vimrc
         unset IFS
         echo "Installed the Ultimate Vim configuration for user $user successfully! Enjoy :-)"
     done
@@ -36,7 +36,7 @@ else
     for user in $SELECTED_USERS; do
         homepath=$(eval echo "~$user")
         IFS=''
-        echo $VIMRC > ${homepath}/.vimrc
+        echo $VIMRC > ${HOME}/.vimrc
         unset IFS
         echo "Installed the Ultimate Vim configuration for user $user successfully! Enjoy :-)"
     done
